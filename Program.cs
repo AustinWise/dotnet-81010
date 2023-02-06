@@ -1,6 +1,5 @@
-﻿using System;
-using System.Globalization;
-
+﻿using System.Globalization;
+using System.Diagnostics;
 
 static class Program
 {
@@ -12,6 +11,7 @@ static class Program
 
     static void Main(string[] args)
     {
+        Console.WriteLine($"Attach to PID {Process.GetCurrentProcess().Id} and press enter.");
         Console.ReadLine();
         if (args.Length != 0)
         {
