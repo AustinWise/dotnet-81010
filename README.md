@@ -8,7 +8,9 @@ run.cmd
 ```
 
 Then attach with Visual Studio and Press Enter. When it breaks on the unhandled exception,
-the call stack should look garbled.
+the call stack should look garbled:
+
+![](screenshot.png)
 
 # Versions tested with
 
