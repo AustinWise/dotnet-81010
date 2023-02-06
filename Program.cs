@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 static class Program
 {
@@ -13,11 +12,7 @@ static class Program
     {
         Console.WriteLine($"Attach to PID {Process.GetCurrentProcess().Id} and press enter.");
         Console.ReadLine();
-        if (args.Length != 0)
-        {
-            byte fillValue = byte.Parse(args[0], NumberStyles.HexNumber);
-            AppDomain.CurrentDomain.UnhandledException += (_,_) => FillStack(fillValue);
-        }
+        AppDomain.CurrentDomain.UnhandledException += (_,_) => FillStack(0xff);
         throw new Exception();
     }
 }
